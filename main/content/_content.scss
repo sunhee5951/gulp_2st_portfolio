@@ -1,0 +1,140 @@
+#content {
+    width: 100%; height: 100%; padding: 50px 110px; box-sizing: border-box; transition: 0.5s;
+
+    .inner{
+        width: 100%; height: 600px; 
+
+        &::after {content: ''; display: block; clear: both;}
+
+        .left {
+            width: 30%; height: 100%;  position: relative; float: left; 
+            
+            h1 {
+                width: 100%; height: 20%; position: absolute; left: 5%; top: 15%; font: bold 100px/1 'arial'; color: rgba(0, 0, 0, 0.692);
+                opacity: 0; transform: translateY(-100px); transition: 0.5s;}
+
+            h2 {
+                width: 100%; height: 20%; position: absolute; left: 5%; top: 35%; font: bold 50px/1 'arial'; border-bottom: 2px solid rgb(114, 204, 207); color: rgb(114, 185, 207);opacity: 0; transform: translateY(-100px); transition: 0.5s;}
+
+            p {
+                width: 100%; height: 30%; position: absolute; left: 5%; bottom: 10%; font: 20px/1 'arial'; color: #555;opacity: 0; transform: translateX(-100px); transition: 0.5s;}
+        }
+
+        .right {
+            width: 65%; height: 100%; position: relative;float: right; transition: 0.5s;
+
+            div {background-size: cover; background-repeat: no-repeat;}
+
+            .box1 {width: 48%; height: 60%;  position: absolute; top: 0%; left: 0%; transition: 0.5s; background-image: url(../img/main/content/img/con4.jpg);opacity: 0; transform: translateY(-100px); transition: 0.5s;}
+
+            .box2 {width: 24%; height: 60%;   position: absolute; top: 0%; left: 50%; transition: 0.5s; background-image: url(../img/main/content/img/con5.jpg); background-position-x: 66%;opacity: 0; transform: translateY(-100px); transition: 0.5s;}
+
+            .box3 {width: 24%; height: 37%; position: absolute; top: 0%; right: 0%; transition: 0.5s;background-image: url(../img/main/content/img/con2.jpg);
+                opacity: 0; transform: translateY(100px); transition: 0.5s;}
+
+            .box4 {width: 24%; height: 37%; position: absolute; bottom: 0%; left: 0%; transition: 0.5s; background-image: url(../img/main/content/img/con1.jpg); opacity: 0; transform: translateY(100px); transition: 0.5s;}
+
+            .box5 {width: 48%; height: 37%; position: absolute; bottom: 0%; left: 26%; transition: 0.5s; background-image: url(../img/main/content/img/con6.jpg);opacity: 0; transform: translateY(100px); transition: 0.5s;}
+
+            .box6 {width: 24%; height: 60%;  position: absolute; bottom: 0%; right: 0%; transition: 0.5s; background-image: url(../img/main/content/img/con7.jpg); opacity: 0; transform: translateY(100px); transition: 0.5s;}
+        }
+    }
+
+    &.on{
+        .inner{
+            .left{
+                h1 {opacity: 1; transform: translateY(0px); transition: 0.5s 0.1s;}
+
+                h2 {opacity: 1; transform: translateY(0px); transition: 0.5s 0.2s;}
+
+                p {opacity: 1; transform: translateX(0px); transition: 0.5s 0.3s;}
+            }
+
+            .right{
+                .box1 {opacity: 1; transform: translateY(0px); transition: 0.5s 0.1s;}
+
+                .box2 {opacity: 1; transform: translateY(0px); transition: 0.5s 0.1s;}
+
+                .box3 {opacity: 1; transform: translateX(0px); transition: 0.5s 0.1s;}
+
+                .box4 {opacity: 1; transform: translateY(0px); transition: 0.5s 0.1s;}
+
+                .box5 {opacity: 1; transform: translateY(0px); transition: 0.5s 0.1s;}
+
+                .box6 {opacity: 1; transform: translateX(0px); transition: 0.5s 0.1s;}
+            }
+        }
+    }
+}
+
+
+
+//tablet
+@media screen and (max-width:$tablet){
+    #content {
+        padding: 50px 50px; box-sizing: border-box;
+
+        .inner{
+            height: 650px;
+
+            .left {
+                width: 100%; height: 30%; 
+                
+                h1 {left: 0%; top: -20%; font: bold 70px/1 'arial';
+                    color: rgba(0, 0, 0, 0.555);}
+                
+                h2 {left: 0%; top: 20%; font: bold 20px/1 'arial'; font-weight: 300; line-height: 16px; border-bottom: 2px solid rgb(114, 165, 207); color: rgb(137, 181, 216);}
+
+                p {left: 0%; bottom: 10%; font: 15px/1 'arial';}
+            }
+
+            .right {
+                width: 100%; height: 70%;  left: 0%; top: 3%; transition: 0.5s; 
+
+                .box1 {width: 65%; height: 27%;background-image: url(../img/main/content/img/pic6.jpg); background-position-y: 20%;}
+                
+                .box2 {width: 35%; height: 42%;  position: absolute; top: 29%; left: 0%; background-image: url(../img/main/content/img/pic14.jpg); background-position-y: 50%;}
+
+                .box3 {width: 65%; height: 27%;  position: absolute; top: 73%; left: 0%; background-image: url(../img/main/content/img/pic10.jpg); background-position-y: 50%;}
+
+                .box4 {width: 34%; height: 27%; position: absolute; top: 0%; left: 66%; background-image: url(../img/main/content/img/pic13.jpg); background-position-y: 45%;}
+
+                .box5 {width: 64%; height: 42%; position: absolute; top: 29%; left: 36%; background-image: url(../img/main/content/img/pic8.jpg); background-position-y: 36%;}
+
+                .box6 {width: 34%; height: 27%;  position: absolute; top: 73%; left: 66%; background-image: url(../img/main/content/img/pic12.jpg); background-position-y: 50%; }
+            }
+        }
+    }
+}
+
+//cellphone
+@media screen and (max-width:$cellphone){
+    #content {
+        padding: 50px 35px 0px; box-sizing: border-box;
+        
+        .inner{
+            .left {
+                h1 {color: rgba(0, 0, 0, 0.692);}
+                
+                h2 {border-bottom: 2px solid rgb(101, 93, 209); color: rgb(96, 94, 218);}
+
+            }
+
+            .right {
+                height: 60%;  top: 6%;
+
+                .box1 {width: 27%; height: 57%; background-image: url(../img/main/content/img/pic5.jpg);  position: absolute; top: 0%; left: 0%;}
+                
+                .box2 {width: 40%; height: 31%;  background-image: url(../img/main/content/img/pic1.jpg); position: absolute; top: 0%; left: 29%;}
+
+                .box3 {width: 27%; height: 41%; background-image: url(../img/main/content/img/pic10.jpg); position: absolute; top: 59%; left: 0%;}
+
+                .box4 {width: 29%; height: 69%; background-image: url(../img/main/content/img/box11.jpg);position: absolute; top: 0%; left: 71%;background-position-x: 75%;}
+
+                .box5 {width: 40%; height: 67%;background-image: url(../img/main/content/img/box1.jpg); position: absolute; top: 33%; left: 29%;}
+
+                .box6 {width: 29%; height: 29%; background-image: url(../img/main/content/img/image20.jpg); background-position-y: 85%; position: absolute; top: 71%; left: 71%;}
+            }
+        }
+    }
+}

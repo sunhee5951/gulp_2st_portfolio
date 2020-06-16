@@ -1,0 +1,65 @@
+#footer {
+    width:100%; background: lightblue;
+
+    .inner {
+        width:100%; margin:0px auto; position: relative;
+        
+        .upper {
+            width:100%; padding:50px 0px 50px; border-bottom:1px solid #888; 
+            
+            &::after {content:''; display:block; clear:both;}
+
+            .terms {
+                float:left; position: absolute; top: 17%; left: 50%; transform: translateX(-50%);
+
+                li {float:left; margin-right:17px;
+                
+                    a {font:bold 14px/1 'arial'; color:#555; font-weight: 100;}
+                }
+            
+            }
+
+            .sns {position: absolute; top: 25%; left: 50%; transform: translateX(-50%);
+
+                li {float:left; margin-left:20px;
+                    a {font:20px/1 'arial'; color:#555;}
+                }
+            }
+        }
+
+        .lower {width:100%; padding:50px 0px 30px; 
+            
+            &::after {content:''; display :block; clear:both;}
+
+            address {font:14px/1.2 'arial'; color:#555; font-weight: 100;margin-bottom:10px; text-align:center; }
+
+            p { font:14px/1 'arial'; color:#555; text-align:center;font-weight: 100;}
+        }
+     
+    }
+}
+
+
+//tablet
+@media screen and (max-width:$tablet){
+    #footer {
+        .inner{
+            .upper{
+                padding:50px 0px 70px;
+
+                .sns { top: 35%; left: 50%;}
+            }
+
+            .lower {padding:30px 0px 30px; }
+        }
+    }
+}
+//cellphone
+@media screen and (max-width:$cellphone){
+
+}
+
+//iphone
+@media screen and (max-width:$iphone){
+    #footer .inner .upper .terms {top: 10%; left: 40%;}
+}

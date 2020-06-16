@@ -1,0 +1,92 @@
+#txtBox {width: 50%; height: 100%;  position: relative; overflow: hidden;
+
+    >.inner {width: 100%; height: 130px; transition: 0.5s;
+        >div{
+            width: 100%; height: 100%; position: absolute; top: 10px; left: 13%; opacity: 0;
+
+            >.maintxt{
+                width: 30%; height: 100%; position: absolute; left: 0%; top: -20%; transition: 1s; opacity: 0;
+
+                >h1 {font: bold 50px/1 'arial'; font-family: 'Nunito';}
+                >h2 {font: bold 50px/1 'arial'; font-family: 'Nunito';}
+            }
+
+            >.lefttxt {width: 20%; height: 100%; position: absolute; right: 30%; top: -20%;transition: 1s 0.1s; opacity: 0; }
+
+            >.righttxt {width: 20%; height: 100%; position: absolute;right: 10%; top: -20%;transition: 1s 0.2s;  opacity: 0;}
+
+            &.on{
+                opacity: 1;
+
+                >.maintxt {top: 10%; opacity: 1;}
+                >.lefttxt {top: 45%; opacity: 1;}
+                >.righttxt {top: 45%; opacity: 1;}
+            }
+        }
+
+        >.box1{
+            >.maintxt{
+                >h1 { color: lightblue;}
+                >h2 { color: rgb(158, 199, 212);}
+            }
+
+            p {color: rgb(82, 139, 156);}
+        }
+
+        >.box2{
+            >.maintxt{
+                >h1 { color: rgb(114, 149, 182);}
+                >h2 { color: rgb(150, 186, 219);}
+            }
+
+            p {color: rgb(114, 149, 182);}
+        }
+
+        >.box3{
+            >.maintxt{
+                >h1 { color: rgb(130, 136, 221);}
+                >h2 { color: rgb(173, 177, 230);}
+            }
+
+            p {color: rgb(130, 136, 221);}
+        }
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+    #txtBox{
+        width: 70%; 
+
+        >.inner{
+            >div{
+                position: absolute; top: 40px;
+
+                .maintxt{
+                    left: -3%; top: -20%;
+
+                    h1 {font: bold 30px/1 'arial';}
+                    h2 {font: bold 30px/1 'arial';}
+                }
+
+                >.lefttxt {display: none;}
+
+                >.righttxt {display: none;}
+            }
+        }
+    }
+}
+
+//cellphone
+@media screen and (max-width:$cellphone){
+
+    #txtBox {width: 100%;
+        .inner{
+            >div{
+                >.maintxt {left: -5%;}
+                >.lefttxt {right: 40%; }
+                >.righttxt {right: 20%; }
+            }
+        }
+    }
+}

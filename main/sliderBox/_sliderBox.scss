@@ -1,0 +1,156 @@
+#sliderBox {
+    width: 40%; height: 100%; position: absolute; bottom: 5%; right: 8%;  display: flex; margin-bottom: 10px; transition: 0.5s; z-index: 3;
+
+    .inner {width: 100%; height: 500px; display: flex;  justify-content: space-between; position: absolute; top: 30%; left: 0%; transition: 0.5s;
+    
+        #boxGroup1 { 
+            width: 48%; height: 100%; overflow: hidden; transition: 0.5s;
+            
+            .box {width: calc(100% *3);  height: 100%; margin-left: 0px;
+                
+                >li {width: calc(100% /3); height: 100%; float: left;  background-repeat: no-repeat; background-size: cover;  position: relative; background-position-x: center;
+                    
+                    >h1 {font: 30px/1 'arial'; color: #333; position: absolute; top: 5%; left: 10%; font-family: 'Nunito'; font-weight: 100;}
+
+                    >p {font: 15px/1 'arial'; color: black; position: absolute; bottom: 7%; left: 10%; font-weight: 100;}
+
+                    &:nth-of-type(1) {background-image: url(../img/main/sliderBox/img/box4.jpg);}
+
+                    &:nth-of-type(2) {background-image: url(../img/main/sliderBox/img/box2.jpg);}
+
+                    &:nth-of-type(3) {background-image: url(../img/main/sliderBox/img/box8.jpg);}
+                }
+            }
+        }
+
+        #boxGroup2 {
+            width: 48%; height: 100%; position: relative; cursor: pointer;
+            
+            .top {
+                width: 100%; height: 60%; position: relative; overflow: hidden;
+                
+                >ul {
+                    width: calc(100% *3); height: 100%; position: absolute; top: 0px;left: 0px;
+                    
+                    >li {
+                        width: calc(100% /3); height: 100%; box-sizing: border-box; float: left; background-repeat: no-repeat; background-size: cover;
+                        
+                        &.t1 {background-image: url(../img/main/sliderBox/img/gray2.jpg);}
+
+                        &.t2 {background-image: url(../img/main/sliderBox/img/gray1.jpg);}
+
+                        &.t3 {background-image: url(../img/main/sliderBox/img/gray3.jpg);}
+                    }
+                }
+            }
+
+            .bottom {
+                width: 100%; height: 40%; position: relative; background: #fff; overflow: hidden;
+
+                >ul {
+                    width: calc(100% *3);  height: 100%;position: absolute; bottom: 0px;left: 0px;
+                    
+                    >li {
+                        width: calc(100% /3); height: 100%; float: left; background-repeat: no-repeat; background-size: cover; position: relative;
+
+                        >h1 {font: 22px/1 'arial'; color: #555; letter-spacing: initial; position: absolute; top: 35%; left: 10%; font-family: 'Nunito'; font-weight: 100;}
+                    }
+                }
+
+                p {font: 15px/1 'arial'; color: red; position: absolute; left: 7%;top: 12%; font-family: 'Nunito'; z-index: 3; }
+
+                .btnNext {font: 15px/1 'arial'; color: #555; position: absolute; left: 7%;bottom: 20%; z-index: 3;}
+            }
+        }
+    }
+}
+
+//tablet
+@media screen and (max-width:$tablet){
+    #sliderBox {
+        width: 70%; height: 70%; position: absolute; bottom: 5%; right: 7%;
+        
+        .inner {
+            height: 75%; display: inline-block; 
+            
+            #boxGroup1 { 
+                width: 100%; height: 48%; margin-bottom: 2%;
+            
+                .box{
+                    >li{
+                        >h1 {font: 25px/1 'arial';}
+
+                        >p {bottom: 13%;}
+
+                        &:nth-of-type(1) {background-position-y: 35%; background-image: url(../img/main/sliderBox/img/box_4.jpg);}
+
+                        &:nth-of-type(2) {background-position-y: 35%; background-image: url(../img/main/sliderBox/img/box_2.jpg);}
+
+                        &:nth-of-type(3) {background-position-y: 35%; background-image: url(../img/main/sliderBox/img/box_16.jpg);}
+                    }
+                }
+            }
+
+            #boxGroup2 {
+                width: 100%; height: 48%;
+                
+                .top {
+                    width: 60%; height: 100%; float: left;
+                    
+                    >li {
+                        width: 100%;
+
+                        &.t1 { background-position-y: 43%}
+                        &.t2 {background-position-y: 43%;}
+                        &.t3 {background-position-y: 43%;}
+                    }
+                }
+
+                .bottom {
+                    width: 40%;  height: 100%; float: right;
+
+                    >li {width: 100%; height: 100%;
+                        >h1 {left: 7%;}
+                    }
+                    .btnNext {bottom: 10%;}
+                }
+            }
+        }
+    }
+}
+
+//cellphone
+@media screen and (max-width:$cellphone){
+    #sliderBox {
+        width: 100%; height: 50%; position: absolute; bottom: 0%; left: 0%;
+        
+        .inner {
+            height: 100%; top: 0%;
+            
+            #boxGroup1 { 
+                height: 50%; margin-bottom: 0%;
+            
+                .box{
+                    >li{
+                        >h1 {left: 5%; top: 18%;}
+                        >p {left: 90%;}
+
+                        &:nth-of-type(1) {background-position-y: 55%;}
+
+                        &:nth-of-type(2) {background-position-y: 50%;}
+
+                        &:nth-of-type(3) {background-position-y: 15%;}
+                    }
+                }
+            }
+
+            #boxGroup2 {
+                height: 50%;
+                
+                .bottom {
+                    .btnNext {position: absolute; left: 10%;bottom: 10%;}
+                }
+            }
+        }
+    }
+}
